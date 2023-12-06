@@ -6,6 +6,7 @@ import { Card } from "../components/card";
 import { Article } from "./article";
 // import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
+import { Spotify } from "react-spotify-embed";
 
 // const redis = Redis.fromEnv();
 
@@ -44,10 +45,10 @@ export default async function ProjectsPage() {
       <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-            Projects
+            Audio Projects
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects are from work and some are on my own time.
+            There isn't one word for it.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
@@ -80,10 +81,26 @@ export default async function ProjectsPage() {
                   id="featured-post"
                   className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
                 >
-                  {featured.title}
+                  Digparatsa
                 </h2>
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                  {featured.description}
+                
+
+
+Audio Engineer Extraordinaire
+
+Welcome to the sonic universe of Digparatsa, where art meets science in the realm of sound. As a passionate audio engineer based in India, my journey in the world of audio manipulation and creation is marked by a blend of technical expertise and creative flair.
+<br></br><br></br>
+Having delved into the depths of sound engineering, I've honed my skills in various aspects of the field, including studio recording, live sound, mixing, mastering, and audio restoration. My passion for excellence is evident in every project I undertake, whether it's crafting the perfect mix for a budding artist or engineering the sound for a large-scale live event.
+<br></br><br></br>
+My expertise isn't just confined to the technicalities of audio engineering; it extends to an acute understanding of the emotional impact of sound. I believe that every piece of audio tells a story, and my role is to ensure that this story is told in the most impactful way possible.
+<br></br><br></br>
+Being a self-taught developer and an AI enthusiast, I've also integrated cutting-edge technology and AI tools into my workflow, enhancing the efficiency and precision of my audio projects. This unique blend of traditional audio engineering skills with modern technological approaches sets me apart in the industry.
+<br></br><br></br>
+I am not just an audio engineer; I am a global citizen, fluent in the universal language of sound. My work transcends geographical boundaries, and I am always eager to collaborate with artists and creators from around the world.
+<br></br><br></br>
+If you're looking for someone who can bring your audio vision to life with expertise, innovation, and a touch of magic, you're in the right place. Let's create something extraordinary together!
+
                 </p>
                 <div className="absolute bottom-4 md:bottom-8">
                   <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
@@ -94,10 +111,10 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
 
-          <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].map((project) => (
+          <div className="flex flex-col w-2/4 gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
+            {[top2].map((project) => (
               <Card key={project.slug}>
-                {/* <Article project={project} views={views[project.slug] ?? 0} /> */}
+                <Spotify link="https://open.spotify.com/album/5XzsEw7eRBTfpnSsUtd4eN?si=5RZu52joT2mFQSrFWpMfkA" />
               </Card>
             ))}
           </div>
@@ -105,33 +122,7 @@ export default async function ProjectsPage() {
         <div className="hidden w-full h-px md:block bg-zinc-800" />
 
         <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 0)
-              .map((project) => (
-                <Card key={project.slug}>
-                  {/* <Article project={project} views={views[project.slug] ?? 0} /> */}
-                </Card>
-              ))}
-          </div>
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 1)
-              .map((project) => (
-                <Card key={project.slug}>
-                  {/* <Article project={project} views={views[project.slug] ?? 0} /> */}
-                </Card>
-              ))}
-          </div>
-          <div className="grid grid-cols-1 gap-4">
-            {sorted
-              .filter((_, i) => i % 3 === 2)
-              .map((project) => (
-                <Card key={project.slug}>
-                  {/* <Article project={project} views={views[project.slug] ?? 0} /> */}
-                </Card>
-              ))}
-          </div>
+          
         </div>
       </div>
     </div>

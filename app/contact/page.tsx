@@ -19,7 +19,7 @@ const socials = [
 	},
 	{
 		icon: <ListMusic size={20} />,
-		href: "https://soundcloud.com/digparatsa",
+		href: "https://open.spotify.com/album/5XzsEw7eRBTfpnSsUtd4eN?fbclid=IwAR2ypsTpDQ-eQopXkUF8IFU4BWZ_3Mt6WEPC-wZ1FU6ouF0YvGtXrSRs_QY",
 		label: "SoundCloud",
 		handle: "digpartsa",
 	},
