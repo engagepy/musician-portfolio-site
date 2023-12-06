@@ -6,19 +6,19 @@ import { Card } from "../components/card";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/digpartsa",
+		icon: <Twitter size={20} color="#1DB954"/>,
+		href: "https://twitter.com/digparatsa?lang=en",
 		label: "Twitter",
 		handle: "@digpartsa",
 	},
 	{
-		icon: <Mail size={20} />,
+		icon: <Mail size={20} color="#1DB954"/>,
 		href: "mailto:digparatsamusic@gmail.com",
 		label: "Email",
 		handle: "music@digpartsa.com",
 	},
 	{
-		icon: <ListMusic size={20} />,
+		icon: <ListMusic size={20} color="#1DB954"/>,
 		href: "https://open.spotify.com/album/5XzsEw7eRBTfpnSsUtd4eN?fbclid=IwAR2ypsTpDQ-eQopXkUF8IFU4BWZ_3Mt6WEPC-wZ1FU6ouF0YvGtXrSRs_QY",
 		label: "SoundCloud",
 		handle: "digpartsa",

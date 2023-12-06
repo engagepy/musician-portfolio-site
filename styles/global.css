@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles go here */
+
+
+@keyframes wobble {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .nav-link {
+    position: relative;
+    padding-bottom: 2px; /* Adjust as needed for spacing */
+    overflow: hidden; /* Ensures the underline doesn't extend beyond the text */
+    color: #fff; /* Text color */
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #1DB954; /* Green color */
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-link:hover::after, .nav-link:focus::after, .nav-link.active::after {
+    transform: scaleX(1);
+    animation: wobble 0.5s ease-in-out;
+  }
+  

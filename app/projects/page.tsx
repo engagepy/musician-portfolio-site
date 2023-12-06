@@ -7,6 +7,7 @@ import { Article } from "./article";
 // import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 import { Spotify } from "react-spotify-embed";
+import Particles from "../components/particles";
 
 // const redis = Redis.fromEnv();
 
@@ -41,7 +42,9 @@ export default async function ProjectsPage() {
 
   return (
     <div className="relative pb-16">
+      
       <Navigation />
+      
       <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
@@ -55,10 +58,10 @@ export default async function ProjectsPage() {
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
-            <Link href={`/projects/${featured.slug}`}>
+            <div>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
-                  <div className="text-xs text-zinc-100">
+                  {/* <div className="text-xs text-zinc-100">
                     {featured.date ? (
                       <time dateTime={new Date(featured.date).toISOString()}>
                         {Intl.DateTimeFormat(undefined, {
@@ -68,9 +71,9 @@ export default async function ProjectsPage() {
                     ) : (
                       <span>SOON</span>
                     )}
-                  </div>
+                  </div> */}
                   <span className="flex items-center gap-1 text-xs text-zinc-500">
-                    <Eye className="w-4 h-4" />{" "}
+                    
                     {/* {Intl.NumberFormat("en-US", { notation: "compact" }).format(
                       views[featured.slug] ?? 0,
                     )} */}
@@ -83,6 +86,10 @@ export default async function ProjectsPage() {
                 >
                   Digparatsa
                 </h2>
+                <Particles
+        className="absolute inset-0 -z-10 animate-fade-in"
+        quantity={100}
+      />
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                 
 
@@ -108,16 +115,21 @@ If you're looking for someone who can bring your audio vision to life with exper
                   </p> */}
                 </div>
               </article>
-            </Link>
+            </div>
           </Card>
 
-          <div className="flex flex-col w-2/4 gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2].map((project) => (
-              <Card key={project.slug}>
+          <div className="w-full gap-2 mx-auto border-t border-gray-900/10 lg:w-2/4 lg:mx-0 lg:border-t-0">
+            
+          {[top2].map((project) => (
+            <Card key={project.slug}>
+              <div className="aspect-w-16 aspect-h-9">
                 <Spotify link="https://open.spotify.com/album/5XzsEw7eRBTfpnSsUtd4eN?si=5RZu52joT2mFQSrFWpMfkA" />
-              </Card>
-            ))}
-          </div>
+              </div>
+            </Card>
+          ))}
+          <Particles />
+        </div>
+
         </div>
         <div className="hidden w-full h-px md:block bg-zinc-800" />
 
