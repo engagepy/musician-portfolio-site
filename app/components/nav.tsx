@@ -18,7 +18,7 @@ export const Navigation: React.FC = () => {
 	}, []);
 
 	return (
-		<header ref={ref}>
+		<header>
 		  <div
 			className={`fixed inset-x-0 top-0 z-50 backdrop-blur duration-200 border-b ${
 			  isIntersecting
@@ -28,13 +28,18 @@ export const Navigation: React.FC = () => {
 		  >
 			<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 			  <div className="flex justify-between gap-8">
+			  	<Link href="/">
+  				  <span className="nav-link duration-200 text-zinc-400 hover:capitalize cursor-pointer">
+					home
+				  </span>
+				</Link>
 				<Link href="/projects">
-  				  <span className="nav-link duration-200 text-zinc-100 hover:capitalize cursor-pointer">
+  				  <span className="nav-link duration-200 text-zinc-400 hover:capitalize cursor-pointer">
 					audio projects
 				  </span>
 				</Link>
 				<Link href="/contact">
-				  <span className="nav-link duration-200 text-zinc-400 hover:text-zinc-100 hover:capitalize cursor-pointer">
+				  <span className="nav-link duration-200 text-zinc-400 hover:capitalize cursor-pointer">
 					contact
 				  </span>
 				</Link>

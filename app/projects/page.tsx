@@ -23,23 +23,7 @@ export default async function ProjectsPage() {
   // // }, {} as Record<string, number>);
   // )
 
-  const featured = allProjects.find((project) => project.slug === "unkey")!;
-  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
-  const sorted = allProjects
-    .filter((p) => p.published)
-    .filter(
-      (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug &&
-        project.slug !== top3.slug,
-    )
-    .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-    );
-
+  
   return (
     <div className="relative pb-16">
       
@@ -87,26 +71,22 @@ export default async function ProjectsPage() {
                   Digparatsa
                 </h2>
                 <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={100}
-      />
+                  className="absolute inset-0 -z-10 animate-fade-in"
+                  quantity={100}
+                />
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                
 
+                  Audio Engineer Extraordinaire
 
-Audio Engineer Extraordinaire
-
-Welcome to the sonic universe of Digparatsa, where art meets science in the realm of sound. As a passionate audio engineer based in India, my journey in the world of audio manipulation and creation is marked by a blend of technical expertise and creative flair.
-<br></br><br></br>
-Having delved into the depths of sound engineering, I've honed my skills in various aspects of the field, including studio recording, live sound, mixing, mastering, and audio restoration. My passion for excellence is evident in every project I undertake, whether it's crafting the perfect mix for a budding artist or engineering the sound for a large-scale live event.
-<br></br><br></br>
-My expertise isn't just confined to the technicalities of audio engineering; it extends to an acute understanding of the emotional impact of sound. I believe that every piece of audio tells a story, and my role is to ensure that this story is told in the most impactful way possible.
-<br></br><br></br>
-Being a self-taught developer and an AI enthusiast, I've also integrated cutting-edge technology and AI tools into my workflow, enhancing the efficiency and precision of my audio projects. This unique blend of traditional audio engineering skills with modern technological approaches sets me apart in the industry.
-<br></br><br></br>
-I am not just an audio engineer; I am a global citizen, fluent in the universal language of sound. My work transcends geographical boundaries, and I am always eager to collaborate with artists and creators from around the world.
-<br></br><br></br>
-If you're looking for someone who can bring your audio vision to life with expertise, innovation, and a touch of magic, you're in the right place. Let's create something extraordinary together!
+                  Welcome to the sonic universe of Digparatsa, where art meets science in the realm of sound. As a passionate audio engineer based in India, my journey in the world of audio manipulation and creation is marked by a blend of technical expertise and creative flair.
+                  <br></br><br></br>
+                  Having delved into the depths of sound engineering, I've honed my skills in various aspects of the field, including studio recording, live sound, mixing, mastering, and audio restoration. My passion for excellence is evident in every project I undertake, whether it's crafting the perfect mix for a budding artist or engineering the sound for a large-scale live event.
+                  <br></br><br></br>
+                  My expertise isn't just confined to the technicalities of audio engineering; it extends to an acute understanding of the emotional impact of sound. I believe that every piece of audio tells a story, and my role is to ensure that this story is told in the most impactful way possible.
+                  <br></br><br></br>
+                  I am not just an audio engineer; I am a global citizen, fluent in the universal language of sound. My work transcends geographical boundaries, and I am always eager to collaborate with artists and creators from around the world.
+                  <br></br><br></br>
+                  If you're looking for someone who can bring your audio vision to life with expertise, innovation, and a touch of magic, you're in the right place. Let's create something extraordinary together!
 
                 </p>
                 <div className="absolute bottom-4 md:bottom-8">
@@ -118,24 +98,20 @@ If you're looking for someone who can bring your audio vision to life with exper
             </div>
           </Card>
 
-          <div className="w-full gap-2 mx-auto border-t border-gray-900/10 lg:w-2/4 lg:mx-0 lg:border-t-0">
-            
-          {[top2].map((project) => (
-            <Card key={project.slug}>
+          <div className="w-full lg:w-2/4 mx-auto lg:border-t-0">
+          
+            <Card key={1}>
               <div className="aspect-w-16 aspect-h-9">
                 <Spotify link="https://open.spotify.com/album/5XzsEw7eRBTfpnSsUtd4eN?si=5RZu52joT2mFQSrFWpMfkA" />
               </div>
             </Card>
-          ))}
-          <Particles />
-        </div>
-
-        </div>
-        <div className="hidden w-full h-px md:block bg-zinc-800" />
-
-        <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
           
+        <Particles />
         </div>
+        
+
+        </div>
+      
       </div>
     </div>
   );
