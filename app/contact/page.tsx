@@ -1,5 +1,5 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Mail, Twitter, ListMusic } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -7,21 +7,21 @@ import { Card } from "../components/card";
 const socials = [
 	{
 		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
+		href: "https://twitter.com/digpartsa",
 		label: "Twitter",
-		handle: "@chronark_",
+		handle: "@digpartsa",
 	},
 	{
 		icon: <Mail size={20} />,
 		href: "mailto:dev@chronark.com",
 		label: "Email",
-		handle: "dev@chronark.com",
+		handle: "music@digpartsa.com",
 	},
 	{
-		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
-		label: "Github",
-		handle: "chronark",
+		icon: <ListMusic size={20} />,
+		href: "https://soundcloud.com/digparatsa",
+		label: "SoundCloud",
+		handle: "digpartsa",
 	},
 ];
 
