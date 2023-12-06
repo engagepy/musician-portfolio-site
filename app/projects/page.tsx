@@ -103,9 +103,9 @@ If you're looking for someone who can bring your audio vision to life with exper
 
                 </p>
                 <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+                  {/* <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
                     Read more <span aria-hidden="true">&rarr;</span>
-                  </p>
+                  </p> */}
                 </div>
               </article>
             </Link>

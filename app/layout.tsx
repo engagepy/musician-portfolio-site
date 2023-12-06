@@ -1,24 +1,24 @@
 import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { Inter } from "next/font/google";
+import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
+    default: "Audio Engineering and Artist Services",
     template: "%s | chronark.com",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Audio Engineering and Artist Services",
   openGraph: {
-    title: "chronark.com",
+    title: "digparatsa.com",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "Audio Engineering and Artist Services",
+    url: "https://digparatsa.com",
+    siteName: "digparatsa.com",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://digparatsa.com",
         width: 1920,
         height: 1080,
       },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Digparatsa",
     card: "summary_large_image",
   },
   icons: {
@@ -66,8 +66,7 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black`}
       >
         {children}
       </body>

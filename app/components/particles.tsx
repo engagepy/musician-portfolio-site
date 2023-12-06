@@ -98,7 +98,7 @@ export default function Particles({
 		const y = Math.floor(Math.random() * canvasSize.current.h);
 		const translateX = 0;
 		const translateY = 0;
-		const size = Math.floor(Math.random() * 2) + 0.1;
+		const size = Math.floor(Math.random() * 3) + 10;
 		const alpha = 0;
 		const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
 		const dx = (Math.random() - 0.5) * 0.2;
@@ -120,19 +120,17 @@ export default function Particles({
 
 	const drawCircle = (circle: Circle, update = false) => {
 		if (context.current) {
-			const { x, y, translateX, translateY, size, alpha } = circle;
-			context.current.translate(translateX, translateY);
-			context.current.beginPath();
-			context.current.arc(x, y, size, 0, 2 * Math.PI);
-			context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-			context.current.fill();
-			context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-			if (!update) {
-				circles.current.push(circle);
-			}
+		  const { x, y, size, alpha } = circle;
+		  context.current.fillStyle = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${alpha})`; // Random color
+		  context.current.font = `${size}px Arial`; // Set font size based on circle size
+		  context.current.fillText("♫", x, y); // Draw music note symbol
+	  
+		  if (!update) {
+			circles.current.push(circle);
+		  }
 		}
-	};
+	  };
+	  
 
 	const clearContext = () => {
 		if (context.current) {
