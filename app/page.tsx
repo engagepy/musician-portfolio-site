@@ -36,12 +36,12 @@ export default function Home() {
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
-        <h2 className="nav-link text-sm text-zinc-400 ">
+        <h2 className="text-sm text-zinc-400 ">
         "Crafting Sonic Journeys with{" "}
           <Link
             target=""
             href="/projects"
-            className="nav-link underline duration-500 hover:text-zinc-300"
+            className="nav-link duration-500 hover:text-zinc-300"
           >
             Precision and Passion"
           </Link> 

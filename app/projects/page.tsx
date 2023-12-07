@@ -3,7 +3,7 @@ import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Spotify } from "react-spotify-embed";
 import Particles from "../components/particles";
-import Loading from "./loading";
+import Loading from "../components/loading";
 // const redis = Redis.fromEnv();
 
 export const revalidate = 60;
