@@ -41,7 +41,7 @@ export default function Home() {
           <Link
             target=""
             href="/projects"
-            className="underline duration-500 hover:text-zinc-300"
+            className="nav-link underline duration-500 hover:text-zinc-300"
           >
             Precision and Passion"
           </Link> 
