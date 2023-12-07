@@ -39,3 +39,26 @@
     animation: wobble 0.5s ease-in-out;
   }
   
+.nav-link {
+  font-family: 'Roboto', Arial, sans-serif; /* Futuristic yet formal font */
+  letter-spacing: 0.05em; /* Slightly increased letter spacing */
+  font-weight: 500; /* Medium font weight */
+  position: relative;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+  background-color: transparent;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0.3rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.7rem; /* Smaller font size for mobile */
+    padding: 0.2rem 0.4rem; /* Reduced padding for mobile */
+  }
+}
+
+

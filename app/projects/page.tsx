@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Spotify } from "react-spotify-embed";
 import Particles from "../components/particles";
-
+import Loading from "./loading";
 // const redis = Redis.fromEnv();
 
 export const revalidate = 60;
@@ -24,8 +24,8 @@ export default async function ProjectsPage() {
       
       <Navigation />
       
-      <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-        <div className="max-w-2xl mx-auto lg:mx-0">
+      <div className=" px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
+        <div className="max-w-2xl mx-auto lg:mx-0 ">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
             Audio Projects
           </h2>
@@ -61,7 +61,7 @@ export default async function ProjectsPage() {
 
                 <h2
                   id="featured-post"
-                  className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                  className=" mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
                 >
                   Digparatsa
                 </h2>
@@ -92,17 +92,21 @@ export default async function ProjectsPage() {
               </article>
             </div>
           </Card>
-
+          
           <div className="w-full lg:w-2/4 mx-auto lg:border-t-0">
           
             <Card key={1}>
               <div className="aspect-w-16 aspect-h-9">
+                <Suspense key={1} fallback={<Loading />}>
                 <Spotify link="https://open.spotify.com/album/5XzsEw7eRBTfpnSsUtd4eN?si=5RZu52joT2mFQSrFWpMfkA" />
+                </Suspense>
               </div>
             </Card>
           
+          
         <Particles />
         </div>
+        
         
 
         </div>
